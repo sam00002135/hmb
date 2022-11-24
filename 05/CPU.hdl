@@ -51,7 +51,7 @@ CHIP CPU {
     DRegister(in =ALUout,load = outD,out = D);
     And(a = instruction[15],b = instruction[3],out = writeM);
     Not(in = ng,out = pos);
-	Not(in = zr,out = nzr);
+    Not(in = zr,out = nzr);
     And(a = instruction[15],b = instruction[0],out = jgt);
     And(a = pos,b = nzr,out = posnzr);
     And(a = posnzr,b = jgt,out = pj);
